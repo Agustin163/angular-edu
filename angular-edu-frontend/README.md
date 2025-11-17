@@ -25,3 +25,31 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Despliegue en Vercel
+
+Para desplegar este proyecto en Vercel, utiliza la siguiente configuración:
+
+### Configuración de Vercel
+
+- **Framework Preset:** Angular
+- **Build Command:** `ng build`
+- **Output Directory:** `dist/angular-edu-frontend`
+- **Install Command:** `npm install`
+
+### Pasos para desplegar
+
+1. Conecta tu repositorio de GitHub con Vercel
+2. Selecciona el framework preset: **Angular**
+3. Vercel detectará automáticamente la configuración, pero asegúrate de que:
+   - **Root Directory:** `angular-edu-frontend` (si el proyecto está en un subdirectorio)
+   - **Build Command:** `ng build`
+   - **Output Directory:** `dist/angular-edu-frontend`
+   - **Install Command:** `npm install`
+4. Haz clic en "Deploy"
+
+### Notas importantes
+
+- El proyecto está configurado para generar el build en `dist/angular-edu-frontend`
+- Asegúrate de que el backend esté desplegado y accesible para que las llamadas a la API funcionen correctamente
+- Puedes configurar variables de entorno en Vercel si necesitas cambiar la URL del backend
