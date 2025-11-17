@@ -21,6 +21,7 @@ export class InstalacionComponent implements OnInit {
       next: (res) => {
         this.info = res;
         this.loading = false;
+        this.error = false;
       },
       error: (err) => {
         console.error('Error loading info:', err);

@@ -95,5 +95,6 @@
 </div>
 
 <div *ngIf="error && !loading" class="error-container">
-  <p>Error al cargar la información. Por favor, intente nuevamente.</p>
+  <p>No se puede leer la información en este momento.</p>
+  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Verifica que el backend esté corriendo en http://localhost:3000</p>
 </div>

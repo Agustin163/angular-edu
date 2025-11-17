@@ -46,6 +46,7 @@ export class IntroduccionComponent implements OnInit {
       next: (res) => {
         this.data = res;
         this.loading = false;
+        this.error = false;
       },
       error: (err) => {
         console.error('Error loading data:', err);

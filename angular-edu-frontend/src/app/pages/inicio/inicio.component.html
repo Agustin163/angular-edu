@@ -3,7 +3,8 @@
 </section>
 
 <section class="error-state" *ngIf="error && !loading">
-  <p>Hubo un problema al cargar la información. Intentá nuevamente.</p>
+  <p>No se puede leer la información en este momento.</p>
+  <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Verifica que el backend esté corriendo en http://localhost:3000</p>
 </section>
 
 <main
