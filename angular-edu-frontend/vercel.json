@@ -1,6 +1,6 @@
 {
   "buildCommand": "ng build",
-  "outputDirectory": "dist/angular-edu-frontend",
+  "outputDirectory": "dist/angular-edu-frontend/browser",
   "installCommand": "npm install",
   "framework": "angular",
   "rewrites": [

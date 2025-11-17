@@ -34,7 +34,7 @@ Para desplegar este proyecto en Vercel, utiliza la siguiente configuración:
 
 - **Framework Preset:** Angular
 - **Build Command:** `ng build`
-- **Output Directory:** `dist/angular-edu-frontend`
+- **Output Directory:** `dist/angular-edu-frontend/browser`
 - **Install Command:** `npm install`
 
 ### Pasos para desplegar
@@ -44,12 +44,12 @@ Para desplegar este proyecto en Vercel, utiliza la siguiente configuración:
 3. Vercel detectará automáticamente la configuración, pero asegúrate de que:
    - **Root Directory:** `angular-edu-frontend` (si el proyecto está en un subdirectorio)
    - **Build Command:** `ng build`
-   - **Output Directory:** `dist/angular-edu-frontend`
+   - **Output Directory:** `dist/angular-edu-frontend/browser`
    - **Install Command:** `npm install`
 4. Haz clic en "Deploy"
 
 ### Notas importantes
 
-- El proyecto está configurado para generar el build en `dist/angular-edu-frontend`
+- El proyecto está configurado para generar el build en `dist/angular-edu-frontend/browser` (Angular 17+ genera el build dentro de una carpeta `browser`)
 - Asegúrate de que el backend esté desplegado y accesible para que las llamadas a la API funcionen correctamente
 - Puedes configurar variables de entorno en Vercel si necesitas cambiar la URL del backend
