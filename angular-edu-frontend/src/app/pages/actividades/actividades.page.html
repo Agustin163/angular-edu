@@ -5,14 +5,32 @@
   </header>
 
   <section class="card-grid">
-    <button type="button" class="card" [routerLink]="['/actividades/verdadero-falso']">
-      <h2>Verdadero o Falso</h2>
-      <p>Responde 5 afirmaciones sobre Angular.</p>
+    <button type="button" class="activity-card activity-card--true-false" [routerLink]="['/actividades/verdadero-falso']">
+      <div class="activity-card__icon">
+        <span class="icon-true-false">✓✗</span>
+      </div>
+      <div class="activity-card__content">
+        <h2 class="activity-card__title">Verdadero o Falso</h2>
+        <p class="activity-card__description">Responde 5 afirmaciones sobre Angular y demuestra tu conocimiento.</p>
+        <div class="activity-card__action">
+          <span class="activity-card__action-text">Comenzar</span>
+          <span class="activity-card__arrow">→</span>
+        </div>
+      </div>
     </button>
 
-    <button type="button" class="card" [routerLink]="['/actividades/multiple-choice']">
-      <h2>Multiple Choice</h2>
-      <p>Selecciona la respuesta correcta entre 3 opciones.</p>
+    <button type="button" class="activity-card activity-card--multiple-choice" [routerLink]="['/actividades/multiple-choice']">
+      <div class="activity-card__icon">
+        <span class="icon-multiple-choice">?</span>
+      </div>
+      <div class="activity-card__content">
+        <h2 class="activity-card__title">Multiple Choice</h2>
+        <p class="activity-card__description">Selecciona la respuesta correcta entre 4 opciones disponibles.</p>
+        <div class="activity-card__action">
+          <span class="activity-card__action-text">Comenzar</span>
+          <span class="activity-card__arrow">→</span>
+        </div>
+      </div>
     </button>
   </section>
 </main>
