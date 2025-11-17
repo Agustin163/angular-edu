@@ -5,7 +5,7 @@
   </header>
 
   <section class="card-grid">
-    <button type="button" class="activity-card activity-card--true-false" [routerLink]="['/actividades/verdadero-falso']">
+    <button type="button" class="activity-card activity-card--true-false activity-card--animate" [routerLink]="['/actividades/verdadero-falso']" (click)="onCardClick($event)">
       <div class="activity-card__icon">
         <span class="icon-true-false">✓✗</span>
       </div>
@@ -19,7 +19,7 @@
       </div>
     </button>
 
-    <button type="button" class="activity-card activity-card--multiple-choice" [routerLink]="['/actividades/multiple-choice']">
+    <button type="button" class="activity-card activity-card--multiple-choice activity-card--animate activity-card--delay" [routerLink]="['/actividades/multiple-choice']" (click)="onCardClick($event)">
       <div class="activity-card__icon">
         <span class="icon-multiple-choice">?</span>
       </div>
