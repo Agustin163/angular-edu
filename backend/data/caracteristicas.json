@@ -1,0 +1,13 @@
+{
+  "titulo": "Características principales de Angular",
+  "caracteristicas": [
+    "Arquitectura basada en componentes",
+    "CLI poderosa para automatizar tareas",
+    "Inyección de dependencias integrada",
+    "Enrutamiento avanzado",
+    "Forms Template Driven y Reactive Forms",
+    "HttpClient incorporado",
+    "Soporte para proyectos escalables"
+  ]
+}
+

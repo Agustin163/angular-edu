@@ -1,0 +1,47 @@
+<section class="loader" *ngIf="loading">
+  <div class="spinner"></div>
+</section>
+
+<section class="error-state" *ngIf="error && !loading">
+  <p>No pudimos cargar los comandos. Reintentá.</p>
+</section>
+
+<main
+  class="page-shell"
+  role="main"
+  aria-label="Comandos de Angular CLI"
+  *ngIf="!loading && !error">
+  <section class="hero">
+    <p class="eyebrow">Angular CLI</p>
+    <h1>{{ data?.titulo }}</h1>
+    <p class="hero-copy">Atajos para crear, probar y desplegar más rápido.</p>
+  </section>
+
+  <section class="content-section" aria-label="¿Qué es Angular CLI?">
+    <div class="section-header">
+      <p class="eyebrow">Productividad</p>
+      <h2>CLI oficial para automatizar tareas</h2>
+      <p>Genera componentes, servicios y módulos siguiendo buenas prácticas.</p>
+    </div>
+  </section>
+
+  <section class="content-section" aria-label="Comandos frecuentes">
+    <div class="section-header">
+      <p class="eyebrow">Comandos</p>
+      <h2>Todo lo que necesitás en una terminal</h2>
+    </div>
+    <div class="grid">
+      <article class="card" *ngFor="let comando of data?.comandos">
+        <h3>{{ comando.desc }}</h3>
+        <pre class="code-block"><code>{{ comando.cmd }}</code></pre>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="card focus">
+      <h2>Consejo</h2>
+      <p>Sumá scripts personalizados y ejecutalos con npm para estandarizar builds.</p>
+    </div>
+  </section>
+</main>

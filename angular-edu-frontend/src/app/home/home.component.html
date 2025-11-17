@@ -1,0 +1,99 @@
+<div class="loader-container" *ngIf="loading">
+  <div class="loader"></div>
+</div>
+
+<div *ngIf="!loading && !error">
+  <!-- Sección Portada -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ info?.title }}</h1>
+      <p class="hero-subtitle">{{ info?.description }}</p>
+    </div>
+  </section>
+
+  <!-- Sección Información del trabajo -->
+  <section class="info-section">
+    <div class="info-container">
+      <div class="info-card">
+        <h2 class="info-title">Información del Trabajo</h2>
+        <div class="info-content">
+          <p class="info-description">
+            Este proyecto representa una solución integral para la gestión educativa, 
+            desarrollada con tecnologías modernas como Angular y Node.js. 
+            El sistema permite la integración entre frontend y backend, 
+            facilitando la comunicación y el intercambio de datos de manera eficiente.
+          </p>
+          <p class="info-description">
+            La arquitectura implementada sigue las mejores prácticas de desarrollo, 
+            garantizando escalabilidad, mantenibilidad y rendimiento óptimo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Objetivos / Misión / Visión -->
+  <section class="objectives-section">
+    <div class="objectives-container">
+      <div class="objective-card">
+        <div class="objective-icon">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="objective-title">Objetivos</h3>
+        <p class="objective-description">
+          Desarrollar una plataforma educativa moderna que mejore la experiencia 
+          de aprendizaje y facilite la gestión académica.
+        </p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-icon">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 16V8C20.9996 7.64928 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64928 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3.27 6.96L12 12.01L20.73 6.96" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="objective-title">Misión</h3>
+        <p class="objective-description">
+          Proporcionar herramientas tecnológicas innovadoras que impulsen 
+          la educación y el desarrollo de competencias digitales.
+        </p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-icon">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 12S5 4 12 4S23 12 23 12S19 20 12 20S1 12 1 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="objective-title">Visión</h3>
+        <p class="objective-description">
+          Ser referente en soluciones educativas tecnológicas, 
+          contribuyendo al futuro de la educación digital.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Conclusiones / Final -->
+  <section class="conclusions-section">
+    <div class="conclusions-container">
+      <h2 class="conclusions-title">Conclusiones</h2>
+      <p class="conclusions-text">
+        Este proyecto demuestra la importancia de integrar tecnologías modernas 
+        en el ámbito educativo. La combinación de Angular en el frontend y Node.js 
+        en el backend permite crear aplicaciones robustas, escalables y de fácil mantenimiento. 
+        La implementación de buenas prácticas de desarrollo garantiza la calidad del código 
+        y facilita la colaboración en equipos de trabajo.
+      </p>
+    </div>
+  </section>
+</div>
+
+<div *ngIf="error && !loading" class="error-container">
+  <p>Error al cargar la información. Por favor, intente nuevamente.</p>
+</div>

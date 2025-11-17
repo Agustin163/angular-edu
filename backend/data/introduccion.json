@@ -1,0 +1,11 @@
+{
+  "titulo": "Introducción a Angular",
+  "contenido": "Angular es un framework construido en TypeScript para crear aplicaciones web modernas, escalables y robustas.",
+  "puntos": [
+    "Angular está creado por Google",
+    "Utiliza componentes",
+    "Soporta SPA (Single Page Applications)",
+    "Usa TypeScript como lenguaje principal"
+  ]
+}
+

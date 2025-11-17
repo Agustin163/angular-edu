@@ -1,0 +1,13 @@
+{
+  "titulo": "Ventajas de Angular",
+  "ventajas": [
+    "Alta escalabilidad",
+    "Código organizado en módulos",
+    "Actualizaciones constantes",
+    "Comunidad grande",
+    "Estandarización del código",
+    "Integración con TypeScript",
+    "Testing incorporado"
+  ]
+}
+

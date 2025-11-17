@@ -1,0 +1,70 @@
+<section class="loader" *ngIf="loading">
+  <div class="spinner"></div>
+</section>
+
+<section class="error-state" *ngIf="error && !loading">
+  <p>No pudimos cargar la información del proyecto.</p>
+</section>
+
+<main
+  class="page-shell"
+  role="main"
+  aria-label="Acerca del proyecto"
+  *ngIf="!loading && !error">
+  <section class="hero">
+    <p class="eyebrow">Sobre Angular EDU</p>
+    <h1>{{ info?.title || 'Acerca del proyecto' }}</h1>
+    <p class="hero-copy">{{ info?.description || 'Una plataforma educativa moderna desarrollada con Angular y Node.js.' }}</p>
+  </section>
+
+  <section class="content-section" aria-label="¿Qué es Angular?">
+    <div class="section-header">
+      <p class="eyebrow">Framework</p>
+      <h2>¿Qué es Angular?</h2>
+      <p>Framework de Google para construir SPAs robustas con TypeScript.</p>
+    </div>
+    <p>
+      Angular es un framework de desarrollo web de código abierto diseñado para crear aplicaciones de una sola página.
+      Utiliza TypeScript y una arquitectura basada en componentes para escalar con facilidad.
+    </p>
+  </section>
+
+  <section class="content-section" aria-label="Características">
+    <div class="section-header">
+      <p class="eyebrow">Características</p>
+      <h2>Lo que hace único a Angular</h2>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <h3>Componentes</h3>
+        <p>Encapsulan vista, lógica y estilos.</p>
+      </article>
+      <article class="card">
+        <h3>Data binding</h3>
+        <p>Sincronizá datos de forma declarativa.</p>
+      </article>
+      <article class="card">
+        <h3>CLI potente</h3>
+        <p>Generá código y automatizá builds.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section" aria-label="Comandos básicos">
+    <div class="section-header">
+      <p class="eyebrow">Comandos</p>
+      <h2>Angular en la terminal</h2>
+    </div>
+    <pre class="code-block"><code>ng new proyecto
+ng serve -o
+ng generate component feature
+ng build --configuration production</code></pre>
+  </section>
+
+  <section class="content-section">
+    <div class="card focus">
+      <h2>Ventajas</h2>
+      <p>Arquitectura clara, comunidad activa y soporte empresarial que acompaña cada release.</p>
+    </div>
+  </section>
+</main>

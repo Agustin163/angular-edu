@@ -1,0 +1,13 @@
+{
+  "titulo": "Comandos básicos de Angular CLI",
+  "comandos": [
+    { "cmd": "ng new proyecto", "desc": "Crea un nuevo proyecto Angular" },
+    { "cmd": "ng serve -o", "desc": "Inicia el servidor de desarrollo y abre el navegador" },
+    { "cmd": "ng generate component nombre", "desc": "Genera un nuevo componente" },
+    { "cmd": "ng generate service nombre", "desc": "Genera un nuevo servicio" },
+    { "cmd": "ng build", "desc": "Compila el proyecto para producción" },
+    { "cmd": "ng test", "desc": "Ejecuta tests unitarios" },
+    { "cmd": "ng help", "desc": "Muestra ayuda de todos los comandos disponibles" }
+  ]
+}
+

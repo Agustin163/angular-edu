@@ -1,0 +1,34 @@
+<footer class="site-footer" role="contentinfo" aria-label="Información del sitio Angular EDU">
+  <div class="footer__container">
+    <div class="footer__brand">
+      <h3>Angular EDU</h3>
+      <p>Experiencias de aprendizaje con tecnología moderna.</p>
+    </div>
+
+    <nav class="footer__links" aria-label="Enlaces rápidos">
+      <a routerLink="/" routerLinkActive="active">Inicio</a>
+      <a routerLink="/introduccion" routerLinkActive="active">Introducción</a>
+      <a routerLink="/caracteristicas" routerLinkActive="active">Características</a>
+      <a routerLink="/ventajas" routerLinkActive="active">Ventajas</a>
+      <a routerLink="/comandos" routerLinkActive="active">Comandos</a>
+      <a routerLink="/instalacion" routerLinkActive="active">Instalación</a>
+      <a routerLink="/acerca-del-proyecto" routerLinkActive="active">Acerca del proyecto</a>
+    </nav>
+
+    <div class="footer__meta">
+      <p>¿Querés revisar el código?</p>
+      <a
+        class="repo-link"
+        href="https://github.com/tu-org/angular-edu"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Abrir repositorio en GitHub">
+        Repositorio en GitHub
+      </a>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <p>&copy; {{ currentYear }} Angular EDU. Construido con Angular Style.</p>
+  </div>
+</footer>

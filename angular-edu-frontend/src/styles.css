@@ -1,0 +1,32 @@
+@import './assets/styles/variables.css';
+
+:host, * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--neutral-100);
+  color: var(--neutral-900);
+  margin: 0;
+  line-height: 1.7;
+}
+
+main {
+  min-height: calc(100vh - 160px);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button:focus,
+a:focus {
+  outline: var(--focus);
+}

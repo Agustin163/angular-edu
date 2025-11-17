@@ -1,0 +1,48 @@
+<section class="loader" *ngIf="loading">
+  <div class="spinner"></div>
+</section>
+
+<section class="error-state" *ngIf="error && !loading">
+  <p>No pudimos cargar las características. Volvé a intentar.</p>
+</section>
+
+<main
+  class="page-shell"
+  role="main"
+  aria-label="Características de Angular"
+  *ngIf="!loading && !error">
+  <section class="hero">
+    <p class="eyebrow">Arquitectura</p>
+    <h1>{{ data?.titulo }}</h1>
+    <p class="hero-copy">Principios que mantienen la plataforma sólida y escalable.</p>
+  </section>
+
+  <section class="content-section" aria-label="Características principales">
+    <div class="section-header">
+      <p class="eyebrow">Pilares</p>
+      <h2>Todo comienza con un set sólido de patrones</h2>
+    </div>
+    <div class="grid">
+      <article class="card" *ngFor="let feature of data?.caracteristicas">
+        <h3>{{ feature }}</h3>
+        <p>Implementación guiada por componentes, servicios y rutas cohesionadas.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section" aria-label="Data binding">
+    <div class="section-header">
+      <p class="eyebrow">Data binding</p>
+      <h2>Sincronizá datos con confianza</h2>
+    </div>
+    <pre class="code-block" ngNonBindable><code>&lt;input [(ngModel)]="nombre" /&gt;
+&lt;p&gt;{{ nombre }}&lt;/p&gt;</code></pre>
+  </section>
+
+  <section class="content-section">
+    <div class="card focus">
+      <h2>Resumen</h2>
+      <p>Angular ofrece modularidad, CLI poderosa y componentes reutilizables para acelerar proyectos enterprise.</p>
+    </div>
+  </section>
+</main>

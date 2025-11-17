@@ -1,0 +1,56 @@
+<main class="page-shell fade-in">
+
+  <header class="hero">
+    <h1>Verdadero o Falso</h1>
+    <p>Responde 5 preguntas sobre Angular</p>
+    <p class="timer" *ngIf="!terminado">Tiempo: {{ tiempo }}s</p>
+  </header>
+
+  <div *ngIf="!terminado && preguntas.length" class="quiz-card animate-in">
+    <div class="status-bar">
+      <h2>Pregunta {{ index + 1 }} de {{ preguntas.length }}</h2>
+      <span>Tiempo: {{ tiempo }}s</span>
+    </div>
+    <p class="texto">{{ preguntas[index].pregunta }}</p>
+
+    <div class="botones">
+      <button type="button" (click)="responder(true)">Verdadero</button>
+      <button type="button" (click)="responder(false)">Falso</button>
+    </div>
+  </div>
+
+  <div *ngIf="terminado" class="resultado fade-in">
+    <div class="medalla" [ngClass]="medalla.clase">
+      <span class="medalla__icono">{{ medalla.icono }}</span>
+      <div>
+        <h3>{{ medalla.titulo }}</h3>
+        <p>{{ medalla.descripcion }}</p>
+      </div>
+    </div>
+
+    <p class="puntaje">Puntaje: {{ puntaje }} / {{ preguntas.length }} ({{ porcentaje }}%)</p>
+    <p class="mensaje-final">{{ mensajeFinal }}</p>
+    <p class="tiempo-final">Tiempo total: {{ tiempo }} segundos</p>
+
+    <div class="acciones-finales">
+      <button class="btn-reiniciar" type="button" (click)="reiniciar()">Reiniciar</button>
+      <a routerLink="/actividades" class="volver">Volver</a>
+    </div>
+
+    <div class="correcciones fade-in" *ngIf="review.length">
+      <h3>Correcciones</h3>
+      <div class="correccion-item" *ngFor="let r of review; let i = index">
+        <p><strong>{{ i + 1 }}) {{ r.pregunta }}</strong></p>
+        <p>
+          <span class="estado" [class.correcto]="r.correcta" [class.incorrecto]="!r.correcta">
+            {{ r.correcta ? '✔' : '✘' }}
+          </span>
+          Tu respuesta: {{ r.tuRespuesta ? 'Verdadero' : 'Falso' }} · Correcta: {{ r.respuestaCorrecta ? 'Verdadero' : 'Falso' }}
+        </p>
+        <p class="explicacion">{{ r.explicacion }}</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+

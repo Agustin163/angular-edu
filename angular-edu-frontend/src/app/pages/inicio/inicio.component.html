@@ -1,0 +1,66 @@
+<section class="loader" *ngIf="loading" aria-busy="true" aria-live="polite">
+  <div class="spinner"></div>
+</section>
+
+<section class="error-state" *ngIf="error && !loading">
+  <p>Hubo un problema al cargar la información. Intentá nuevamente.</p>
+</section>
+
+<main
+  class="page-shell"
+  role="main"
+  aria-label="Inicio Angular EDU"
+  *ngIf="!loading && !error">
+  <section class="hero" aria-label="Presentación Angular EDU">
+    <p class="eyebrow">Angular Style</p>
+    <h1>{{ data?.title }}</h1>
+    <p class="hero-copy">
+      {{ data?.description }}
+    </p>
+    <div class="hero-actions">
+      <a class="btn primary" routerLink="/caracteristicas">Ver características</a>
+      <a class="btn ghost" routerLink="/comandos">Ver comandos</a>
+    </div>
+  </section>
+
+  <section class="content-section" aria-label="Información del trabajo">
+    <div class="section-header">
+      <p class="eyebrow">Blueprint</p>
+      <h2>Información del proyecto</h2>
+      <p>
+        Plataforma integral para gestionar contenidos, métricas y experiencias educativas con Angular y Node.js.
+      </p>
+    </div>
+    <div class="grid">
+      <article class="card" *ngFor="let highlight of highlights">
+        <h3>{{ highlight.title }}</h3>
+        <p>{{ highlight.copy }}</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section" aria-label="Objetivos estratégicos">
+    <div class="section-header">
+      <p class="eyebrow">Estrategia</p>
+      <h2>Objetivos, misión y visión</h2>
+      <p>Una mirada integral para sostener la evolución de Angular EDU.</p>
+    </div>
+    <div class="grid">
+      <article class="card" *ngFor="let item of objectives">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="card focus">
+      <h2>Conclusiones</h2>
+      <p>
+        Integrar Angular y Node.js nos permite acelerar entregas, garantizar performance y mantener una
+        experiencia consistente en cualquier dispositivo.
+      </p>
+    </div>
+  </section>
+</main>
+

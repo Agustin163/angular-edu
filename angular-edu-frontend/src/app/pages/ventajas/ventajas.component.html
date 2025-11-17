@@ -1,0 +1,49 @@
+<section class="loader" *ngIf="loading">
+  <div class="spinner"></div>
+</section>
+
+<section class="error-state" *ngIf="error && !loading">
+  <p>No pudimos cargar las ventajas. Intentalo más tarde.</p>
+</section>
+
+<main
+  class="page-shell"
+  role="main"
+  aria-label="Ventajas de Angular"
+  *ngIf="!loading && !error">
+  <section class="hero">
+    <p class="eyebrow">Beneficios</p>
+    <h1>{{ data?.titulo }}</h1>
+    <p class="hero-copy">Motivos por los que Angular impulsa equipos modernos.</p>
+  </section>
+
+  <section class="content-section" aria-label="Ventajas principales">
+    <div class="section-header">
+      <p class="eyebrow">Valor</p>
+      <h2>Productividad, calidad y comunidad</h2>
+    </div>
+    <div class="grid">
+      <article class="card" *ngFor="let ventaja of data?.ventajas">
+        <h3>{{ ventaja }}</h3>
+        <p>Prácticas alineadas a grandes organizaciones y proyectos.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section" aria-label="Angular CLI">
+    <div class="section-header">
+      <p class="eyebrow">Angular CLI</p>
+      <h2>Automatizá tu flujo de trabajo</h2>
+    </div>
+    <pre class="code-block"><code>ng generate component dashboard
+ng generate service auth
+ng build --configuration production</code></pre>
+  </section>
+
+  <section class="content-section">
+    <div class="card focus">
+      <h2>Conclusión</h2>
+      <p>Framework respaldado por Google, con tooling estable y comunidad activa que asegura soporte a largo plazo.</p>
+    </div>
+  </section>
+</main>

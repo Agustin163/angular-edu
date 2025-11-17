@@ -1,0 +1,97 @@
+<section class="loader" *ngIf="loading">
+  <div class="spinner"></div>
+</section>
+
+<section class="error-state" *ngIf="error && !loading">
+  <p>No pudimos traer la introducción. Reintentá en unos segundos.</p>
+</section>
+
+<main
+  class="page-shell"
+  role="main"
+  aria-label="Introducción a Angular"
+  *ngIf="!loading && !error">
+  <section class="hero">
+    <p class="eyebrow">Primeros pasos</p>
+    <h1>{{ data?.titulo }}</h1>
+    <p class="hero-copy">{{ data?.contenido }}</p>
+  </section>
+
+  <section class="content-section" aria-label="Conceptos clave">
+    <div class="section-header">
+      <p class="eyebrow">Fundamentos</p>
+      <h2>¿Qué hace único a Angular?</h2>
+      <p>Un framework completo para construir experiencias ricas, seguras y escalables.</p>
+    </div>
+    <div class="grid">
+      <article class="card" *ngFor="let punto of data?.puntos">
+        <h3>{{ punto }}</h3>
+        <p>Profundizamos estos temas en los módulos siguientes.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section" aria-label="Cómo funciona Angular">
+    <div class="section-header">
+      <p class="eyebrow">Arquitectura</p>
+      <h2>Cómo funciona Angular</h2>
+    </div>
+    <div class="grid">
+      <article class="card" *ngFor="let item of fundamentals">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section dark" aria-label="TypeScript + Angular">
+    <div class="section-header">
+      <p class="eyebrow">TypeScript</p>
+      <h2>Un lenguaje a la altura del framework</h2>
+      <p>Tipado, interfaces y decoradores para escribir código más seguro.</p>
+    </div>
+    <pre class="code-block"><code>export interface Curso &#123;
+  titulo: string;
+  duracion: number;
+&#125;
+
+&#64;Component(&#123;
+  selector: 'app-curso',
+  standalone: true
+&#125;)
+export class CursoComponent &#123;&#125;</code></pre>
+  </section>
+
+  <section class="content-section" aria-label="Ciclo de vida">
+    <div class="section-header">
+      <p class="eyebrow">Lifecycle hooks</p>
+      <h2>Momentos clave de cada componente</h2>
+    </div>
+    <div class="grid">
+      <article class="card" *ngFor="let hook of lifecycle">
+        <h3>{{ hook }}</h3>
+        <p>Hook disponible para reaccionar durante el ciclo de vida.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section" aria-label="Arquitectura visual">
+    <div class="section-header">
+      <p class="eyebrow">Separación de responsabilidades</p>
+      <h2>Componentes, templates y estilos</h2>
+    </div>
+    <div class="grid">
+      <article class="card" *ngFor="let block of architecture">
+        <h3>{{ block.title }}</h3>
+        <p>{{ block.copy }}</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="card focus">
+      <p>Angular combina arquitectura sólida con tooling moderno para que cada feature llegue a producción con calidad.</p>
+    </div>
+  </section>
+</main>
+

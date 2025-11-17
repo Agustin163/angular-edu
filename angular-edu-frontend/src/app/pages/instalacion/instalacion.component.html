@@ -1,0 +1,67 @@
+<section class="loader" *ngIf="loading">
+  <div class="spinner"></div>
+</section>
+
+<section class="error-state" *ngIf="error && !loading">
+  <p>No pudimos conectar con la API. Revisa el backend.</p>
+</section>
+
+<main
+  class="page-shell"
+  role="main"
+  aria-label="Instalacion de Angular"
+  *ngIf="!loading && !error">
+  <section class="hero">
+    <p class="eyebrow">Setup</p>
+    <h1>{{ info?.title || 'Instalacion y Configuracion de Angular' }}</h1>
+    <p class="hero-copy">{{ info?.description || 'Guia paso a paso para dejar listo tu entorno de desarrollo.' }}</p>
+  </section>
+
+  <section class="content-section" aria-label="Requisitos previos">
+    <div class="section-header">
+      <p class="eyebrow">Requisitos</p>
+      <h2>Herramientas indispensables</h2>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <h3>Node.js</h3>
+        <p>Instala la version LTS para acceder a npm y ejecutar Angular CLI.</p>
+      </article>
+      <article class="card">
+        <h3>npm</h3>
+        <p>Gestor de paquetes para instalar dependencias y scripts.</p>
+      </article>
+      <article class="card">
+        <h3>VS Code</h3>
+        <p>Editor recomendado con soporte para TypeScript y extensiones.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section" aria-label="Instalar CLI">
+    <div class="section-header">
+      <p class="eyebrow">CLI</p>
+      <h2>Instalacion global</h2>
+      <p>Usa npm para instalar la herramienta oficial.</p>
+    </div>
+    <pre class="code-block" ngNonBindable><code>npm install -g &#64;angular/cli
+ng version</code></pre>
+  </section>
+
+  <section class="content-section" aria-label="Crear proyecto">
+    <div class="section-header">
+      <p class="eyebrow">Primer proyecto</p>
+      <h2>Crea y ejecuta en minutos</h2>
+    </div>
+    <pre class="code-block" ngNonBindable><code>ng new mi-proyecto
+cd mi-proyecto
+ng serve -o</code></pre>
+  </section>
+
+  <section class="content-section">
+    <div class="card focus">
+      <h2>Conclusion</h2>
+      <p>Con estos pasos ya contas con Angular CLI, un proyecto generado y el servidor en marcha sobre http://localhost:4200.</p>
+    </div>
+  </section>
+</main>
